@@ -18,10 +18,5 @@ export class UserService {
   login(email:string) :Observable<user> {
 		const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<user>(this.baseUrl,email, {headers})
-    .pipe(
-      // map(res => {
-      //   return JSON.stringify(res)
-      // })
-    )
   }
 }
