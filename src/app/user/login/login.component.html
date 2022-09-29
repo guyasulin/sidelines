@@ -1,0 +1,9 @@
+<div class="login">
+  <div class="title">LOGIN</div>
+  <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <input placeholder="Email" type="email" name="email" ngModel #email required>
+    <button type="submit" class="btn-submit" >SUBMIT</button>
+
+    <button routerLink="/register" >REGISTER</button>
+  </form>
+</div>
