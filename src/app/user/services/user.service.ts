@@ -15,8 +15,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  login(email:string) :Observable<user> {
-		const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<user>(this.baseUrl,email, {headers})
+  login() :Observable<user> {
+    return this.http.get<user>(this.baseUrl)
   }
 }

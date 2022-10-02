@@ -2,8 +2,10 @@
   <div class="title">LOGIN</div>
   <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
     <input placeholder="Email" type="email" name="email" ngModel #email required>
+    <div>{{message}}</div>
     <button type="submit" class="btn-submit" >SUBMIT</button>
 
-    <button routerLink="/register" >REGISTER</button>
+
   </form>
+  <a  [routerLink]="['../register/']">Go to Register</a>
 </div>
